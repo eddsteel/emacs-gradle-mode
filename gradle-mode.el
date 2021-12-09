@@ -73,6 +73,7 @@ is a convention for multi-build projects, where dirname is under some
   (let ((dirname (file-name-nondirectory
 		  (directory-file-name (expand-file-name dir)))))
     (or (file-exists-p (expand-file-name "build.gradle" dir))
+        (file-exists-p (expand-file-name "build.gradle.kts" dir))
 	(file-exists-p (expand-file-name
 			(concat dirname ".gradle") dir)))))
 
